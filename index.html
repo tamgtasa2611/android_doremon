@@ -1,1 +1,27 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách chương Doremon</title>
+  </head>
+  <body>
+    <div id="main-div">
+      <ul id="container"></ul>
+    </div>
+    <script>
+      let ul = document.getElementById("container");
+      let api = "https://tamgtasa2611.github.io/android_doremon/api.json";
+      async function getChapters() {
+        const response = await fetch(api);
+        const chapters = await response.json();
+        const chapString = JSON.parse(JSON.stringify(chapters));
+        const chapList = chapString["chapters"];
+        chapList.forEach((chap) => {
+          ul.innerHTML += `<li style="font-size: 24px">${chap["id"]} - ${chap["title"]} - <a style="color: white; background-color: black" href="${chap["url"]}">${chap["url"]}</a></li>`;
+        });
+      }
+      getChapters();
+    </script>
+  </body>
+</html>
