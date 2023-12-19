@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Danh sách chương Doremon</title>
   </head>
-  <body style="background-color: lightslategrey">
+  <body style="background-color: #331d2c; color: gainsboro">
     <div id="main-div" style="font-size: 24px">
       <div style="display: flex; justify-content: space-evenly; padding: 4px">
         <div>
           API:
           <a
-            style="color: white"
+            style="color: gray"
             href="https://tamgtasa2611.github.io/android_doremon/api.json"
             >https://tamgtasa2611.github.io/android_doremon/api.json</a
           >
@@ -19,7 +19,7 @@
         <div>
           Github:
           <a
-            style="color: white"
+            style="color: gray"
             href="https://github.com/tamgtasa2611/android_doremon"
             >https://github.com/tamgtasa2611/android_doremon</a
           >
@@ -36,7 +36,7 @@
         const chapString = JSON.parse(JSON.stringify(chapters));
         const chapList = chapString["chapters"];
         chapList.forEach((chap) => {
-          ul.innerHTML += `<li style = "padding: 4px">${chap["id"]} - ${chap["title"]} - <a style="color: white" href="${chap["url"]}">${chap["url"]}</a></li>`;
+          ul.innerHTML += `<li style = "padding: 4px">${chap["id"]} - ${chap["title"]} - <a style="color: gray" href="${chap["url"]}">${chap["url"]}</a></li>`;
         });
       }
       getChapters();
