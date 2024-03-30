@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<!--    <color name="doremon">#FFADD8E6</color>-->
+    <color name="doremon">#FF5783DB</color>
+    <color name="grey_1">#FF505050</color>
+    <color name="grey_2">#FFC9C9C9</color>
+</resources>
